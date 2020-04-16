@@ -8,7 +8,8 @@ public class JosephusSurvivorTest {
 
 	@Test
 	public void lastElementtest_twoSoldiers_return1() {
-		assertEquals(1, JosephusSurvivor.lastElement(2,1));
+		assertEquals(2, JosephusSurvivor.lastElement(2,1));
+		assertEquals(1, JosephusSurvivor.lastElement(2,2));
 	}
 
 }
