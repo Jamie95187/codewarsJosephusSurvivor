@@ -15,6 +15,8 @@ public class JosephusSurvivorTest {
 	@Test
 	public void lastElementtest_threeSoldiers_return1() {
 		assertEquals(3, JosephusSurvivor.lastElement(3,1));
+		assertEquals(3, JosephusSurvivor.lastElement(3,2));
+
 	}
 	
 
