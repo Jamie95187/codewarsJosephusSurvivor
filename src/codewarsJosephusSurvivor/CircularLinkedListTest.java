@@ -39,15 +39,5 @@ public class CircularLinkedListTest {
 		assertTrue(cll.containsNode(6));
 		cll.deleteNode(6);
 		assertFalse(cll.containsNode(6));
-		
-		cll.addNode(4);
-		assertTrue(cll.containsNode(4));
-		cll.deleteNode(4);
-		assertFalse(cll.containsNode(4));
-		
-		cll.addNode(2);
-		assertTrue(cll.containsNode(2));
-		cll.deleteNode(2);
-		assertFalse(cll.containsNode(2));
 	}
 }

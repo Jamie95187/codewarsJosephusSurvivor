@@ -1,3 +1,14 @@
+/*
+ * This is a solution to the codewars problem:
+ * https://www.codewars.com/kata/555624b601231dc7a400017a/train/java
+ * Solved using TDD processes. Consult Readme for full details.
+ * 
+ * @author  Jamie Wong
+ * @version 13.0.0
+ * @since	17/04/2020
+ */
+
+
 package codewarsJosephusSurvivor;
 
 import static org.junit.Assert.*;

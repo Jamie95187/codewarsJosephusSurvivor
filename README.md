@@ -23,3 +23,29 @@ one every 3 is eliminated until one remains
 The above link about the "base" kata description will give you a more thorough insight about the origin of this kind of permutation, but basically that's all that there is to know to solve this kata.
 
 **Notes and tips**: using the solution to the other kata to check your function may be helpful, but as much larger numbers will be used, using an array/list to compute the number of the survivor may be too slow; you may assume that both n and k will always be >=1.
+
+## Tests
+
+@Test
+public void lastElementtest_twoSoldiers_return1() {
+	assertEquals(2, JosephusSurvivor.lastElement(2,1));
+	assertEquals(1, JosephusSurvivor.lastElement(2,2));
+}
+
+@Test
+public void lastElementtest_threeSoldiers_return1() {
+	assertEquals(3, JosephusSurvivor.lastElement(3,1));
+	assertEquals(3, JosephusSurvivor.lastElement(3,2));
+
+}
+
+@Test
+public void lastElementtest_fourSoldiers_return1() {
+	assertEquals(1, JosephusSurvivor.lastElement(4,2));
+	assertEquals(1, JosephusSurvivor.lastElement(4,3));
+}
+
+@Test
+public void lastElementtest_sevenSoldiersCycleOf3_return4() {
+	assertEquals(4, JosephusSurvivor.lastElement(7,3));
+}
