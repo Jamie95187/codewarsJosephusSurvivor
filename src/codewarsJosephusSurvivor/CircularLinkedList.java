@@ -37,7 +37,7 @@ public class CircularLinkedList {
 	public boolean containsNode(int searchValue) {
 		Node currentNode = head;
 		
-		if(head == null) {
+		if (head == null) {
 			return false;
 		} else {
 			do {
@@ -45,9 +45,31 @@ public class CircularLinkedList {
 					return true;
 				}
 				currentNode = currentNode.nextNode;
-			} while (currentNode != head);
-			
+			} while (currentNode !=  head);
 			return false;
+		}
+	}
+	
+	// Deleting an element
+	
+	public void deleteNode(int valueToDelete) {
+		Node currentNode = head;
+		
+		if (head != null) {
+			if (currentNode.value == valueToDelete) {
+				head = head.nextNode;
+				tail.nextNode = head;
+			} else {
+				do {
+					Node nextNode = currentNode.nextNode;
+					if (nextNode.value == valueToDelete) {
+						currentNode.nextNode = nextNode.nextNode;
+						tail = currentNode;
+						break;
+					}
+					currentNode = currentNode.nextNode;
+				} while (currentNode != head);
+			}
 		}
 	}
 }
