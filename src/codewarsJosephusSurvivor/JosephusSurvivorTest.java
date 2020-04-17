@@ -24,5 +24,10 @@ public class JosephusSurvivorTest {
 		assertEquals(1, JosephusSurvivor.lastElement(4,2));
 		assertEquals(1, JosephusSurvivor.lastElement(4,3));
 	}
+	
+	@Test
+	public void lastElementtest_sevenSoldiersCycleOf3_return4() {
+		assertEquals(4, JosephusSurvivor.lastElement(7,3));
+	}
 
 }
