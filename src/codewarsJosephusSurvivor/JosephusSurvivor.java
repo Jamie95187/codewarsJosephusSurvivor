@@ -1,29 +1,22 @@
 package codewarsJosephusSurvivor;
 
-import java.util.TreeSet;
-
 public class JosephusSurvivor {
 
 	static int lastElement(final int n, final int k) {
-		TreeSet<Integer> setOfSoldiers = new TreeSet<Integer>();
-//		if(k == 1) {
-//			return n;
-//		}
-		for(int i = 1; i <= n; i++) {
-			setOfSoldiers.add(i);
+		if (k == 1) {
+			return n;
 		}
-		for(int i = 1; i < n; i++) {
-			if((i * k) % n == 0) {
-				setOfSoldiers.remove(n);
-			} else {
-				setOfSoldiers.remove((i * k) % n);
-			}
+		CircularLinkedList soldiers = new CircularLinkedList();
+		for (int i = 1; i <= n; i++) {
+			soldiers.addNode(i);
 		}
-		int lastSoldier = 0;
-		for(Integer soldier : setOfSoldiers) {
-			lastSoldier = soldier;
+		
+		// delete all but one soldier
+		
+		for (int j = 0; j < n - 1; j++) {
+			soldiers.deleteNodeInStepOfi(k);
 		}
-		return lastSoldier;
+		return soldiers.getHeadValue();
 	}
 	
 }

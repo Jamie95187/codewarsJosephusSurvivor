@@ -19,9 +19,10 @@ public class JosephusSurvivorTest {
 
 	}
 	
-//	@Test
-//	public void lastElementtest_fourSoldiers_return1() {
-//		assertEquals(1, JosephusSurvivor.lastElement(4,2));
-//	}
+	@Test
+	public void lastElementtest_fourSoldiers_return1() {
+		assertEquals(1, JosephusSurvivor.lastElement(4,2));
+		assertEquals(1, JosephusSurvivor.lastElement(4,3));
+	}
 
 }
